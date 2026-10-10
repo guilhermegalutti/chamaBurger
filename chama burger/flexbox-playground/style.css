@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: arial, Arial, Helvetica, sans-serif;
+body {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     background: #f4f4f4;
     padding: 40px;
@@ -16,7 +20,7 @@ h1{
     margin-bottom: 8px;
 }
 
-.dica{
+.dica {
     text-align: center;
     color: #666;
     margin-bottom: 24px;
@@ -28,7 +32,7 @@ h1{
     margin: 0 4px;
     border: 2px solid #222;
     border-radius: 8px;
-    background: #f4f4f4;
+    background: #fff;
     cursor: pointer;
 }
 
@@ -39,16 +43,16 @@ h1{
 
 .legenda {
     text-align: center;
-    margin-top: 16px ;
+    margin-top: 16px;
     font-weight: bold;
 }
 
-.legenda span{
-    font-display: inline-block;
+.legenda span {
+    display: inline-block;
     margin: 0 12px;
     padding: 6px 14px;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 8px;    
 }
 
 .legenda .principal {
@@ -60,11 +64,11 @@ h1{
 }
 
 .box {
-    border-radius:12px;
+    border-radius: 12px;
     color: #fff;
     font-weight: bold;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -73,7 +77,7 @@ h1{
     font-size: 28px;
 }
 
-.box .tamanho{
+.box .tamanho {
     font-size: 13px;
     font-weight: normal;
     opacity: 0.9;
@@ -113,18 +117,41 @@ h1{
     height: 120px;
 }
 
-.container{
-    border:4px dashed #111;
+.container {
+    border: 4px dashed  #111;
     min-height: 320px;
     padding: 20px;
 
     display: flex;
 
-    flex-direction: column-reverse;
+    flex-direction: row;
+
     /* ↑ define o eixo principal (main axis):
  row -> itens em linha, da esquerda pra direita (padrão)
  row-reverse -> itens em linha, invertidos (6,5,4,3,2,1)
  column -> itens em coluna, de cima pra baixo
- column-reverse -> itens em coluna, invertidos
-*/
+ column-reverse -> itens em coluna, invertidos*/
+
+    flex-wrap: nowrap;
+     /* ↑ decide se os itens quebram linha quando não cabem:
+        nowrap -> tudo numa linha só, pode espremer ou estourar (padrão)
+        wrap   -> quebra linha quando não há espaço (use o botão "+ caixa") */
+
+    justify-content: flex-start;
+
+    align-items: stretch;
+
+    gap: 16px;
+}
+
+.box2 {
+    order: -1;
+}
+
+.box4 {
+    flex-grow: 1;
+}
+
+.box6 {
+    align-items: ;
 }
